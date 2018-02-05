@@ -23,6 +23,9 @@ class AppServiceProvider extends ServiceProvider
 }
 ```
 
+
+Done! Now you can use the Facade `FeatureFlags::isEnabled('FEATURE_NAME')` to check if the feature is enabled for the current user, or `FeatureFlags::isEnabledFor('FEATURE_NAME', $user)`, passing the user.
+
 ### Restrict access to the dashboard
 
 At this point, any user can access your dashboard, which is not cool. You can restrict access to the dashboard to only users you want. To do so, you can add this to your `AppServiceProvider`:
