@@ -24,7 +24,7 @@
                 "Madewithlove\\FeatureFlags\\FeatureFlagsServiceProvider"
             ],
             "aliases": {
-                "FeatureFlags": "Madewithlove\\FeatureFlags\\Facades\\FeatureFlags"
+                "FeatureFlag": "Madewithlove\\FeatureFlags\\Facades\\FeatureFlag"
             }
         }
     }

@@ -6,7 +6,7 @@ namespace Madewithlove\FeatureFlags\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class FeatureFlags extends Facade
+class FeatureFlag extends Facade
 {
     /**
      * @return string
