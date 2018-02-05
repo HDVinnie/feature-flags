@@ -4,7 +4,7 @@ Bring feature flags to your Laravel application. Deploy often, release when read
 
 ## Getting Started
 
-1. Run `composer require madewithlove/feature-flags`
+1. Run `composer require madewithlove/feature-flags` (Not published yet, use the [Local Repositories](https://stackoverflow.com/questions/17426192/composer-using-a-local-repository#17428021) composer feature)
 2. Publish the configs `php artisan vendor:publish --provider="Madewithlove\\FeatureFlags\\FeatureFlagsServiceProvider"`
 3. Run the migrations: `php artisan migrate`
 4. Register the dashboard routes in your `AppServiceProvider`, like so:
