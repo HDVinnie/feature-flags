@@ -43,6 +43,10 @@ class FeatureFlagsManager
 
     private function updateRedisCacheIfMissing(string $feature)
     {
+        if ($this->redisManager->isCached($feature)) {
+            return;
+        }
+
         $flag = $this->featureFlags->findByFlag($feature);
 
         if ($flag) {

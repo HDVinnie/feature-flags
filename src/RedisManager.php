@@ -76,4 +76,10 @@ class RedisManager
     {
         return $this->redisFactory->connection('feature-flags');
     }
+
+    public function isCached(string $feature)
+    {
+        return !!$this->connection()
+            ->exists($feature);
+    }
 }
