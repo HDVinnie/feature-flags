@@ -48,3 +48,9 @@ class AppServiceProvider extends ServiceProvider
 ```
 
 The `FeatureFlags::authUsing()` method receives a closure and in the closure, you are going to receive the Laravel Request object accessing the dashboard. To deny access you only have to return false from your closure.
+
+## Screenshots
+
+![Dashboard](/docs/dashboard.png)
+![New Flag](/docs/dashboard-new-feature-flag.png)
+![Bypass Rules](/docs/dashboard-new-feature-flag-bypass.png)
