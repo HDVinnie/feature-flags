@@ -2,11 +2,11 @@
 
 namespace Tests\Integration;
 
-use App\FeatureFlag;
-use App\FeatureFlags\Checkers;
 use Tests\IntegrationTestCase;
-use App\FeatureFlags\RedisManager;
 use Illuminate\Support\Facades\Redis;
+use Madewithlove\FeatureFlags\Checkers;
+use Madewithlove\FeatureFlags\RedisManager;
+use Madewithlove\FeatureFlags\Models\FeatureFlag;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class CachesFeatureFlagsTest extends IntegrationTestCase

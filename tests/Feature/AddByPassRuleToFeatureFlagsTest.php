@@ -2,14 +2,14 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
-use App\FeatureFlag;
-use App\FeatureFlags\FeatureFlags;
+use Tests\IntegrationTestCase;
 use Illuminate\Support\Facades\Event;
+use Madewithlove\FeatureFlags\FeatureFlags;
+use Madewithlove\FeatureFlags\Models\FeatureFlag;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use App\FeatureFlags\Events\FlagByPassRulesWereUpdated;
+use Madewithlove\FeatureFlags\Events\FlagByPassRulesWereUpdated;
 
-class AddByPassRuleToFeatureFlagsTest extends TestCase
+class AddByPassRuleToFeatureFlagsTest extends IntegrationTestCase
 {
     use RefreshDatabase;
 

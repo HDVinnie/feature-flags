@@ -3,13 +3,13 @@
 namespace Tests\Feature;
 
 use Mockery;
-use Tests\TestCase;
-use App\FeatureFlag;
-use App\FeatureFlags\FeatureFlags;
+use Tests\IntegrationTestCase;
+use Madewithlove\FeatureFlags\FeatureFlags;
 use Illuminate\Database\Eloquent\Collection;
-use App\FeatureFlags\Repositories\FeatureFlagsEloquentRepository;
+use Madewithlove\FeatureFlags\Models\FeatureFlag;
+use Madewithlove\FeatureFlags\Repositories\FeatureFlagsEloquentRepository;
 
-class ListFeatureFlagsTest extends TestCase
+class ListFeatureFlagsTest extends IntegrationTestCase
 {
     public function setUp()
     {

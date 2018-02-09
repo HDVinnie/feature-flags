@@ -2,17 +2,14 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
-use App\FeatureFlag;
-use App\FeatureFlags\FeatureFlags;
+use Tests\IntegrationTestCase;
 use Illuminate\Support\Facades\Event;
-use App\FeatureFlags\Events\FlagWasCreated;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Madewithlove\FeatureFlags\FeatureFlags;
+use Madewithlove\FeatureFlags\Models\FeatureFlag;
+use Madewithlove\FeatureFlags\Events\FlagWasCreated;
 
-class CreateFeatureFlagsTest extends TestCase
+class CreateFeatureFlagsTest extends IntegrationTestCase
 {
-    use RefreshDatabase;
-
     public function setUp()
     {
         parent::setUp();
