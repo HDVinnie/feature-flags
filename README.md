@@ -1,5 +1,9 @@
 # Feature Flags
 
+<p align="center">
+    <a href="https://circleci.com/gh/madewithlove/feature-flags"><img src="https://circleci.com/gh/madewithlove/feature-flags.svg?style=shield" alt="Build Status"></a>
+</p>
+
 Bring feature flags to your Laravel application. Deploy often, release when ready.
 
 ## Getting Started
