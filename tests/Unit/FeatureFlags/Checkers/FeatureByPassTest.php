@@ -2,17 +2,16 @@
 
 namespace Tests\Unit\FeatureFlags\Checkers;
 
-use App\User;
 use Tests\TestCase;
-use App\FeatureFlag;
-use App\FeatureFlags\ByPassRules;
-use App\FeatureFlags\Checkers\FeatureByPass;
+use Madewithlove\FeatureFlags\ByPassRules;
+use Madewithlove\FeatureFlags\Models\FeatureFlag;
+use Madewithlove\FeatureFlags\Checkers\FeatureByPass;
 
 class FeatureByPassTest extends TestCase
 {
     public function testDeniesFeatureToUsersNotInTheIdsList()
     {
-        $user = new User();
+        $user = new DummyUser();
         $user->id = 123;
 
         $feature = new FeatureFlag();
@@ -23,7 +22,7 @@ class FeatureByPassTest extends TestCase
 
     public function testAllowsUsersByIds()
     {
-        $user = new User();
+        $user = new DummyUser();
         $user->id = 123;
 
         $feature = new FeatureFlag();
@@ -32,5 +31,15 @@ class FeatureByPassTest extends TestCase
         $checker = new FeatureByPass(ByPassRules::fromFeatureFlag($feature));
 
         $this->assertTrue($checker->isValidFor($user));
+    }
+}
+
+class DummyUser
+{
+    public $id;
+
+    public function getKey()
+    {
+        return $this->id;
     }
 }

@@ -3,8 +3,8 @@
 namespace Tests\Unit;
 
 use Tests\TestCase;
-use App\FeatureFlag;
-use App\FeatureFlags\Checkers;
+use Madewithlove\FeatureFlags\Checkers;
+use Madewithlove\FeatureFlags\Models\FeatureFlag;
 
 class FeatureFlagTest extends TestCase
 {

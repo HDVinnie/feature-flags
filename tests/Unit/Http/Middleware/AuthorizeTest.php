@@ -5,8 +5,8 @@ namespace Tests\Unit\Http\Middleware;
 use Tests\TestCase;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use App\FeatureFlags\FeatureFlags;
-use App\FeatureFlags\Http\Middleware\Authorize;
+use Madewithlove\FeatureFlags\FeatureFlags;
+use Madewithlove\FeatureFlags\Http\Middleware\Authorize;
 
 class AuthorizeTest extends TestCase
 {
